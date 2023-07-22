@@ -2,6 +2,8 @@
 #define MAINUI_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
+#include <QtSql>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class mainUI; }
@@ -17,10 +19,12 @@ public:
 
 private:
     Ui::mainUI *ui;
+    QGraphicsScene *scene;
+    QGraphicsScene *portrait;
 
 private slots:
-    void showme(int);
-
+    void selectoption(int);
+    void rollnext();
 
 };
 #endif // MAINUI_H
