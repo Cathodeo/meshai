@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>battleui</class>
+ <widget class="QWidget" name="battleui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1151</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGraphicsView" name="Ally_view">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>221</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Enemy_view">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>10</y>
+     <width>641</width>
+     <height>341</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ally_name">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>430</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Character</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>401</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="verticalSpacing">
+     <number>56</number>
+    </property>
+    <property name="leftMargin">
+     <number>40</number>
+    </property>
+    <property name="rightMargin">
+     <number>100</number>
+    </property>
+    <item row="1" column="1">
+     <widget class="QProgressBar" name="Enemy1_hp">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="Enemy1_name">
+      <property name="text">
+       <string>Enemy1</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QProgressBar" name="Ally_hp">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>480</y>
+     <width>118</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>450</y>
+     <width>261</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="Attack1">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Attack2">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Attack3">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Attack4">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QProgressBar" name="Ally_energy">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>510</y>
+     <width>118</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>24</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ally_hp_label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>480</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>HP</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Ally_energy_label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>510</y>
+     <width>54</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ENERGY</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

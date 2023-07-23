@@ -1,4 +1,6 @@
 #include "optionbuttons.h"
+#include <QtSql>
+#include <QSqlQuery>
 
 optionButtons::optionButtons(QWidget *parent):
     QWidget(parent)
@@ -10,8 +12,9 @@ optionButtons::optionButtons(QWidget *parent):
  //Create 5 options with a vertical layout//
  for (int row = 0; row < 5; ++row) {
      //Identify each option with its row number
-     QString numberito = QString::number(row + 1);
-     QPushButton *option = new QPushButton("Option " + numberito);
+     QString rowformatted;
+     rowformatted.setNum(row);
+     QPushButton *option = new QPushButton("&button" + rowformatted, this);
      hLayout->addWidget(option,row);
      opt_column.append(option);
      mapper->setMapping(option, opt_column.count());
@@ -30,3 +33,12 @@ void optionButtons::optionChosen(int index)
     emit optionNumber(index);
 }
 
+void optionButtons::setText(int index)
+{
+    QSqlQuery getSequence ("select current_sequence from sessions");
+    int current_sequence = getSequence.first();
+    QSqlQuery recursiveReplacement;
+    recursiveReplacement.prepare("update sessions set current_sequence = :sequenceCurrent");
+    recursiveReplacement.bindValue(":sequenceCurrent" , current_sequence);
+    recursiveReplacement.exec();
+}

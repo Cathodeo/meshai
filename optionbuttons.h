@@ -12,6 +12,7 @@ public:
     optionButtons(QWidget *parent = nullptr);
 public slots:
     void optionChosen(int index);
+    void setText(int index);
 private:
     QVector<QPushButton*>opt_column;
 signals:

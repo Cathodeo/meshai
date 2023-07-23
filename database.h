@@ -23,6 +23,8 @@ static bool createConnection()
         return false;
     }
     QSqlQuery startFromZero_1 ("delete from sessions");
-    QSqlQuery startFromZero_2 ("insert into sessions values (1, 1)");
+    QSqlQuery startFromZero_b1 ("delete from actor_instance");
+    QSqlQuery startFromZero_2 ("insert into sessions values (1, 1, 0)");
+    QSqlQuery startFromZero_b2 ("insert into actor_instance values (1, 100, 1, 100), (101, 100, 1, 100)");
     return true;
     }

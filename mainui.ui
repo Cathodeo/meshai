@@ -145,10 +145,10 @@
    <widget class="optionButtons" name="optionWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>900</x>
-      <y>200</y>
+      <x>910</x>
+      <y>20</y>
       <width>191</width>
-      <height>271</height>
+      <height>511</height>
      </rect>
     </property>
    </widget>

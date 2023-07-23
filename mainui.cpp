@@ -70,8 +70,9 @@ void mainUI::rollnext() {
 }
 
 void mainUI::selectoption(int index) {
-    QString indexFormatted = QString::number(index);
-    ui->textBox->setText("selected option: " + indexFormatted );
+    QSqlQuery optionRegister;
+    optionRegister.prepare("update sessions set last_choice = :choice");
+    optionRegister.bindValue("choice", index);
 }
 
 
